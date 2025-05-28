@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<RootNamespace>ArkanoidGame</RootNamespace>
+		<AssemblyName>ArkanoidGame</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Assets\ball.png" />
+	  <None Remove="Assets\heart.png" />
+	  <None Remove="Assets\paddle.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Assets\ball.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Assets\heart.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Assets\paddle.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Objects\Ball.cs">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Compile>
+	</ItemGroup>
+</Project>
+
